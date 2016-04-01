@@ -7,9 +7,8 @@ int transparent = 0;
 int playerX = 0;
 int speed = 10;
 int down = 0;
-int xAnchor =100;
 int yAnchor = 0;
-
+int xAnchor = 100;
 void setup() {
   size(1000, 800);
 }
@@ -23,6 +22,7 @@ void draw() {
   player.drawAt(500, 750, 1, 1);
 down+=5;
   square.drawAt(0, 0, 1, 1); 
+  
 
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
