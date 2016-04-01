@@ -6,16 +6,23 @@ int colour = 100;
 int transparent = 0;
 int playerX = 0;
 int speed = 10;
+int down = 0;
+int xAnchor =100;
+int yAnchor = 0;
+
 void setup() {
   size(1000, 800);
 }
 
 void draw() {
-  background(0);
-
-
-
-  // background(0);
+  //my classes
+  square square = new square();
+  player player = new player();
+ background(0);
+  //the player(Triangle shape)
+  player.drawAt(500, 750, 1, 1);
+down+=5;
+  square.drawAt(0, 0, 1, 1); 
 
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
@@ -27,26 +34,24 @@ void draw() {
       playerX-=speed;
     }
   }
-  fill(colour, saturation, transparent);
-  triangle(475+playerX, 750, 525+playerX, 750, 500+playerX, 700);
-  
-  if(playerX== -480){
+  if (playerX== -480) {
     playerX+=10;
   }
-  if(playerX==480){
+  if (playerX==480) {
     playerX-=10;
   }
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
       colour +=25;
-    }if (keyCode ==LEFT|| key=='a'){
+    }
+    if (keyCode ==LEFT|| key=='a') {
       saturation+=25;
     }
   }
- if(saturation>=225){
-   saturation-=100;
- }
-  if(colour>=250){
-   colour-=150;
- }
+  if (saturation>=225) {
+    saturation-=100;
+  }
+  if (colour>=250) {
+    colour-=150;
+  }
 }
