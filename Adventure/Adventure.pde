@@ -8,21 +8,26 @@ int playerX = 0;
 int speed = 10;
 int down = 0;
 int yAnchor = 0;
-int xAnchor = 100;
+float numbers= 0;
+//my classes
+square square; 
+player player = new player();
+
 void setup() {
   size(1000, 800);
+  square = new square();
 }
 
 void draw() {
-  //my classes
-  square square = new square();
-  player player = new player();
- background(0);
+
+  background(0);
+
+
   //the player(Triangle shape)
   player.drawAt(500, 750, 1, 1);
-down+=5;
-  square.drawAt(0, 0, 1, 1); 
-  
+  //sets square speed 
+  square.drawAt(); 
+
 
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
