@@ -1,14 +1,11 @@
-int tilesize = 50;
-int column = 0;
-int row = 0;
+
 int saturation = 125;
 int colour = 100;
 int transparent = 0;
 int playerX = 0;
 int speed = 10;
-int down = 0;
 int yAnchor = 0;
-float numbers= 0;
+
 //my classes
 square square; 
 player player = new player();
