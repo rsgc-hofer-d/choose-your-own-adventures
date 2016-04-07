@@ -7,12 +7,14 @@ int speed = 10;
 int yAnchor = 0;
 
 //my classes
-square square; 
+square s1; 
+square s2;
 player player = new player();
 
 void setup() {
   size(1000, 800);
-  square = new square();
+  s1 = new square();
+  s2 = new square();
 }
 
 void draw() {
@@ -22,10 +24,10 @@ void draw() {
 
   //the player(Triangle shape)
   player.drawAt(500, 750, 1, 1);
-  //sets square speed 
-  square.drawAt(); 
-
-
+  //the square
+  s1.drawAt(); 
+  s2.drawAt();
+  //Allows player to move from left to right
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
       playerX+=speed;
@@ -42,6 +44,8 @@ void draw() {
   if (playerX==480) {
     playerX-=10;
   }
+
+  //changes colour of Player(triangle) when moving 
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
       colour +=25;
