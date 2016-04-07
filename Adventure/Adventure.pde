@@ -9,12 +9,14 @@ int yAnchor = 0;
 //my classes
 square s1; 
 square s2;
+pattern p1;
 player player = new player();
 
 void setup() {
   size(1000, 800);
   s1 = new square();
   s2 = new square();
+  p1 = new pattern();
 }
 
 void draw() {
@@ -27,6 +29,8 @@ void draw() {
   //the square
   s1.drawAt(); 
   s2.drawAt();
+  // the patern that comes up once you get far enough in the game
+  p1.drawAt();
   //Allows player to move from left to right
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
