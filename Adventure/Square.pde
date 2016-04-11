@@ -13,7 +13,7 @@ float x = random(0,950);
 
   void drawAt() {
 
-    println(x);
+    
     fill(230, 100, 150);  
     y += speed;
     fill(y-100, 100, 100);

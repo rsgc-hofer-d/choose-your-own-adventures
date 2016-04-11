@@ -21,9 +21,9 @@ void setup() {
 
 void draw() {
 
-  background(0);
+ 
 
-
+background(0);
   //the player(Triangle shape)
   player.drawAt(500, 750, 1, 1);
   //the square
