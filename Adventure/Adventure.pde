@@ -32,14 +32,17 @@ void draw() {
   // the patern that comes up once you get far enough in the game
   p1.drawAt();
   //Allows player to move from left to right
+  //also changes colour of triangle when moving
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
       playerX+=speed;
+      colour +=25;
     }
   }
   if (keyPressed==true) {
     if (key=='a'||keyCode==LEFT) {
       playerX-=speed;
+      saturation+=25;
     }
   }
   if (playerX== -480) {
@@ -47,16 +50,6 @@ void draw() {
   }
   if (playerX==480) {
     playerX-=10;
-  }
-
-  //changes colour of Player(triangle) when moving 
-  if (keyPressed==true) {
-    if (keyCode == RIGHT|| key =='d') {
-      colour +=25;
-    }
-    if (keyCode ==LEFT|| key=='a') {
-      saturation+=25;
-    }
   }
   if (saturation>=225) {
     saturation-=100;
