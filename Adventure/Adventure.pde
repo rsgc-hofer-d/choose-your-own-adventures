@@ -3,7 +3,7 @@ int saturation = 125;
 int colour = 100;
 int transparent = 0;
 int playerX = 0;
-int speed = 10;
+int speed = 8;
 int yAnchor = 0;
 
 //my classes
@@ -13,10 +13,12 @@ pattern p1;
 player player = new player();
 
 void setup() {
+  
   size(1000, 800);
   s1 = new square();
   s2 = new square();
   p1 = new pattern();
+  colorMode(HSB,360,100,100);
 }
 
 void draw() {
