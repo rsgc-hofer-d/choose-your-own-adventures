@@ -14,7 +14,7 @@ int speed = 5;
   void drawAt() {
     y+=speed;
     while (tile<value) {
-      fill(255);
+      fill(120+15*tile,100,100);
       noStroke(); 
       //bottom of the pattern creates the two straight lines at the right and left side of the screen
       rect(0+75*tile, start+y, 75, 75);
@@ -23,13 +23,13 @@ int speed = 5;
     }
     //creating large diamond
     while (side<value1) {
-      fill(255);
+      fill(195+15*side,100,100-10*side);
       //bottom of large diamond, first loop right side second loop left side
       rect(650+40*side, start+y-75-75*side, 75, 75);
       rect(275-40*side, start+y-75-75*side, 75, 75);
       //top of the the triangle first loop is the right side second left side
-      rect(825-40*side, start+y-375-75*side, 75, 75);
-      rect(100+40*side, start+y-375-75*side, 75, 75);
+      rect(650+40*side, start+y-675+75*side, 75, 75);
+      rect(275-40*side, start+y-675+75*side, 75, 75);
       side+=1;
     }
     //creates small diamond

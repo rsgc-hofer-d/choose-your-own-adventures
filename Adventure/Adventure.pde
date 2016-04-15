@@ -58,10 +58,4 @@ background(0);
   if (playerX==480) {
     playerX-=10;
   }
-  if (saturation>=225) {
-    saturation-=100;
-  }
-  if (colour>=250) {
-    colour-=150;
-  }
 }
