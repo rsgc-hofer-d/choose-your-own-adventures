@@ -19,5 +19,6 @@ float x = random(0,950);
     fill(y%360, 100, 100);
     rect(x, y, 75, 75);
     rect(x, y, 75, 75);
+   
   }
 }

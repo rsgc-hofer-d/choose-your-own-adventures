@@ -46,7 +46,7 @@ class pattern {
       fill(y%360+20,100,100);
       rect(472.5, start+y-450, 55, 225);
       rect(407.5, start+y-375, 185, 75);
-      println(smallside);
+    
     }
     if (smallside == value2) {
       smallside=0;
