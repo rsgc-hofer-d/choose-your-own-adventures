@@ -9,15 +9,18 @@ int yAnchor = 0;
 //my classes
 square s1; 
 square s2;
-pattern p1;
+pattern2 p2;
 player player = new player();
+pattern1 p1;
 
 void setup() {
   
-  size(1000, 800);
+  size(1000, 750);
   s1 = new square();
   s2 = new square();
-  p1 = new pattern();
+  p1 = new pattern1();
+  p2 = new pattern2();
+  
   colorMode(HSB,360,100,100);
 }
 
@@ -31,8 +34,10 @@ background(0);
   //the square
   s1.drawAt(); 
   s2.drawAt();
-  // the patern that comes up once you get far enough in the game
+  //the pattern that starts out the game
   p1.drawAt();
+  // the patern that comes up once you get far enough in the game
+  p2.drawAt();
   //Allows player to move from left to right
   //also changes colour of triangle when moving
   if (keyPressed==true) {

@@ -1,7 +1,7 @@
-class pattern {
+class pattern2 {
   int tile = 0;
   int start = -700;
-  int speed = 5;
+int speed = 5;
   int y = 0;
   int value = 5;
   int value1 = 5;
@@ -9,7 +9,7 @@ class pattern {
   int smallside=0;
   int value2 = 3;
 
-  void pattern() {
+  void pattern2() {
   }
   void drawAt() {
     y+=speed;
