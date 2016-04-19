@@ -34,7 +34,7 @@ int speed = 5;
     }
     //creates small diamond
     while (smallside<value2) {
-      fill(255);
+      fill(15*smallside,100,100);
       //bottom of diamond, first line is right second left
       rect(462.5+65*smallside, start+y-225-75*smallside, 75, 75);
       rect(462.5-65*smallside, start+y-225-75*smallside, 75, 75);
@@ -43,7 +43,7 @@ int speed = 5;
       rect(462.5-65*smallside, start+y-525+75*smallside, 75, 75);
       smallside+=1;
       //makes the cross inside the small diamond a different colour.
-      fill(y%360+20,100,100);
+      fill(y%360+1,100,100);
       rect(472.5, start+y-450, 55, 225);
       rect(407.5, start+y-375, 185, 75);
     

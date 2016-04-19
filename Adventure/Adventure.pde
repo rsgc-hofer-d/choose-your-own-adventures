@@ -1,4 +1,4 @@
-
+Square test[] = new Square[500];
 int saturation = 125;
 int colour = 100;
 int transparent = 0;
@@ -7,8 +7,7 @@ int speed = 8;
 int yAnchor = 0;
 
 //my classes
-square s1; 
-square s2;
+
 pattern2 p2;
 player player = new player();
 pattern1 p1;
@@ -16,8 +15,10 @@ pattern1 p1;
 void setup() {
   
   size(1000, 750);
-  s1 = new square();
-  s2 = new square();
+  for(int counter=0;counter<test.length;counter+=1){
+    test[counter] = new Square(random(0,925),random(-10000),75);
+  }
+
   p1 = new pattern1();
   p2 = new pattern2();
   
@@ -29,11 +30,13 @@ void draw() {
  
 
 background(0);
+for(int counter=0; counter<test.length;counter+=1){
+  test[counter].update();
+}
   //the player(Triangle shape)
   player.drawAt(500, 750, 1, 1);
-  //the square
-  s1.drawAt(); 
-  s2.drawAt();
+
+
   //the pattern that starts out the game
   p1.drawAt();
   // the patern that comes up once you get far enough in the game
@@ -52,10 +55,11 @@ background(0);
       saturation+=25;
     }
   }
-  if (playerX== -480) {
+  if (playerX<= -480) {
     playerX+=10;
   }
-  if (playerX==480) {
+  if (playerX>=480) {
     playerX-=10;
   }
+  println(playerX);
 }
