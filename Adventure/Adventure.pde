@@ -1,4 +1,4 @@
-Square test[] = new Square[500];
+Square test[] = new Square[250];
 int saturation = 125;
 int colour = 100;
 int transparent = 0;
