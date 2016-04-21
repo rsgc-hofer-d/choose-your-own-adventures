@@ -1,7 +1,5 @@
 Square test[] = new Square[250];
-int saturation = 125;
-int colour = 100;
-int transparent = 0;
+
 int playerX = 0;
 int speed = 8;
 int yAnchor = 0;
@@ -46,13 +44,13 @@ for(int counter=0; counter<test.length;counter+=1){
   if (keyPressed==true) {
     if (keyCode == RIGHT|| key =='d') {
       playerX+=speed;
-      colour +=25;
+    
     }
   }
   if (keyPressed==true) {
     if (key=='a'||keyCode==LEFT) {
       playerX-=speed;
-      saturation+=25;
+   
     }
   }
   if (playerX<= -480) {
