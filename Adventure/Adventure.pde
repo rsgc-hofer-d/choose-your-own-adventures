@@ -1,6 +1,7 @@
 Square test[] = new Square[250];
-
-int playerX = 0;
+Square next[] = new Square[250];
+int scene = 0;
+int playerX = 475;
 int speed = 8;
 int yAnchor = 0;
 
@@ -15,6 +16,8 @@ void setup() {
   size(1000, 750);
   for(int counter=0;counter<test.length;counter+=1){
     test[counter] = new Square(random(0,925),random(-10000),75);
+  
+   
   }
 
   p1 = new pattern1();
@@ -25,8 +28,8 @@ void setup() {
 
 void draw() {
 
- 
-
+ println(playerX);
+if (scene==0){
 background(0);
 for(int counter=0; counter<test.length;counter+=1){
   test[counter].update();
@@ -53,11 +56,32 @@ for(int counter=0; counter<test.length;counter+=1){
    
     }
   }
-  if (playerX<= -480) {
+  if (playerX<= 0) {
     playerX+=10;
   }
-  if (playerX>=480) {
+  if (playerX>=950) {
     playerX-=10;
   }
-  println(playerX);
+  
+  if (keyPressed==true){
+    if (key =='c'){
+      scene+=1;
+    }
+  
+  }
+  }
+  if(scene ==1){
+    background(0);
+    textAlign(CENTER);
+    fill(0,100,100);
+    String end = "GAME OVER";
+    textSize(72);
+    text(end,500,375);
+    if (keyPressed==true){
+    if (key =='x'){
+      scene-=1;
+    }
+  
+  }
+  }
 }

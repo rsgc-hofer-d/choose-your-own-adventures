@@ -1,6 +1,6 @@
 class pattern2 {
   int tile = 0;
-  int start = -700;
+  int start = -1000;
 int speed = 5;
   int y = 0;
   int value = 5;
