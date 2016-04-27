@@ -1,7 +1,7 @@
 Square test[] = new Square[250];
 Square next[] = new Square[250];
 int scene = 0;
-int playerX = 475;
+int playerX = 0;
 int speed = 8;
 int yAnchor = 0;
 
@@ -28,14 +28,25 @@ void setup() {
 
 void draw() {
 
- println(playerX);
+ 
 if (scene==0){
 background(0);
 for(int counter=0; counter<test.length;counter+=1){
   test[counter].update();
 }
   //the player(Triangle shape)
+    fill(0);
+  line(500,line1(500),525,line1(525));
+  line(500,line2(500),475,line2(475));
+  line(0,750,1000,750);
+  
   player.drawAt(500, 750, 1, 1);
+  if(525+playerX > mouseX && mouseX >= 475+playerX){
+   if(mouseY>=line1(500) && mouseY< line1(525) && mouseY>=line2(500) && mouseY<= line2(475) && mouseY<750 ){
+   rect(100,100,100,100);
+   }
+ }
+
 
 
   //the pattern that starts out the game
@@ -56,10 +67,10 @@ for(int counter=0; counter<test.length;counter+=1){
    
     }
   }
-  if (playerX<= 0) {
+  if (playerX<= -475) {
     playerX+=10;
   }
-  if (playerX>=950) {
+  if (playerX>=475) {
     playerX-=10;
   }
   
@@ -84,4 +95,15 @@ for(int counter=0; counter<test.length;counter+=1){
   
   }
   }
+}
+//HIT DETECTION
+float line1(float x){
+  float b = -300;
+  float m = 2;
+  return m*x+b;
+}
+float line2(float x){
+  float b =1700;
+  float m =-2;
+  return m*x+b;
 }
