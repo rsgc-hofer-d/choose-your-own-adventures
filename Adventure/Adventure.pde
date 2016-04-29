@@ -1,4 +1,5 @@
 Square test[] = new Square[200];
+Square pattern[] = new Square[20];
 
 int scene = 0;
 int playerX = 0;
@@ -14,10 +15,12 @@ pattern1 p1;
 void setup() {
 
   size(1000, 750);
-  for (int counter=10; counter<test.length; counter+=1) {
-    test[counter] = new Square(random(0, 925), random(-10000, -200), 75);
+  for (int counter=0; counter<test.length; counter+=1) {
+    test[counter] = new Square(random(0, 925), random(-10000, -200), 75,0,100,100);
   }
-  test[0] = new Square(0, 0, 75);
+  for (int pcounter=0; pcounter<4;pcounter++){
+    p1[pcounter] = new Square(150+40*pcounter,375-75*pcounter,75,0,100,100);
+  }
 
   p1 = new pattern1();
   p2 = new pattern2();

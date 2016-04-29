@@ -14,7 +14,7 @@ class pattern1 {
     while (bic<bicvalue) {
      
          
-      }
+      
       fill(280+20*bic, 100, 100);
       //left side of pattern
       rect(150+40*bic, y+375-75*bic, 75, 75);
