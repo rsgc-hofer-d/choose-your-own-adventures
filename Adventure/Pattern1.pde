@@ -3,14 +3,18 @@ class pattern1 {
   int bicvalue = 4;
   int line = 0;
   int linevalue=3;
-float y = 0;
-float speed=5;
+  float y = 0;
+  float speed=5;
+  
   void pattern1() {
   }
   void drawAt() {
-     y+=speed;
+    y+=speed;
+
     while (bic<bicvalue) {
      
+         
+      }
       fill(280+20*bic, 100, 100);
       //left side of pattern
       rect(150+40*bic, y+375-75*bic, 75, 75);

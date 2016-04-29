@@ -18,10 +18,9 @@ class Square {
 
   void update(float playerX) {
 
-    if (525+playerX > x && x >= 475+playerX) {
+    if (525+playerX >= x && x >= 475+playerX) {
       if (y>=line1(500) && y< line1(525) && y>=line2(500) && y<= line2(475) && y<750 ) {
-        fill(0,0,100);
-        rect(100, 100, 100, 100);
+       scene+=1;
       }
     }
 
@@ -29,8 +28,8 @@ class Square {
     y += speed;
     fill(y%360, 100, 100);
     rect(x, y, size, size);
-    while(-1000>y && y>-2000){
-      y=random(-10000);
-    }
+    //while(-1000>y && y>-2000){
+    //  y=random(-10000);
+    //}
   }
 }

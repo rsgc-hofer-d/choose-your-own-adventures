@@ -14,9 +14,10 @@ pattern1 p1;
 void setup() {
 
   size(1000, 750);
-  for (int counter=0; counter<test.length; counter+=1) {
-    test[counter] = new Square(random(0, 925), random(-10000,-200), 75);
+  for (int counter=10; counter<test.length; counter+=1) {
+    test[counter] = new Square(random(0, 925), random(-10000, -200), 75);
   }
+  test[0] = new Square(0, 0, 75);
 
   p1 = new pattern1();
   p2 = new pattern2();
@@ -26,7 +27,8 @@ void setup() {
 
 void draw() {
 
-  println(playerX);
+
+
   if (scene==0) {
     background(0);
     for (int counter=0; counter<test.length; counter+=1) {
@@ -34,6 +36,10 @@ void draw() {
     }
     //the player(Triangle shape)
 
+    float m = second();
+    fill(0, 100, 100);
+    textSize(36);
+    text("Score: "+frameCount/30, 800, 100);
     player.drawAt(500, 750, 1, 1);
     //if (525+playerX > mouseX && mouseX >= 475+playerX) {
     //  if (mouseY>=line1(500) && mouseY< line1(525) && mouseY>=line2(500) && mouseY<= line2(475) && mouseY<750 ) {
@@ -73,12 +79,17 @@ void draw() {
     }
   }
   if (scene ==1) {
+    frameRate = 0;
     background(0);
     textAlign(CENTER);
     fill(0, 100, 100);
     String end = "GAME OVER";
     textSize(72);
     text(end, 500, 375);
+    fill(0, 100, 100);
+    textSize(36);
+    text("Score: ", 800, 100);
+
     if (keyPressed==true) {
       if (key =='x') {
         scene-=1;
