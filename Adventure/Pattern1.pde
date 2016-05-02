@@ -5,16 +5,16 @@ class pattern1 {
   int linevalue=3;
   float y = 0;
   float speed=5;
-  
+
   void pattern1() {
   }
   void drawAt() {
     y+=speed;
-
+    //loop to create the pattern
     while (bic<bicvalue) {
-     
-         
-      
+
+
+
       fill(280+20*bic, 100, 100);
       //left side of pattern
       rect(150+40*bic, y+375-75*bic, 75, 75);
@@ -30,6 +30,7 @@ class pattern1 {
         line+=1;
       }
     }
+    //makes it so it draws over and over again instead of just drawing once and getting covered up by the background
     if (line==linevalue) {
       line=0;
     }
