@@ -1,6 +1,6 @@
 class pattern1 {
-  int bic = 0;
-  int bicvalue = 4;
+  int diamond = 0;
+  int diamondvalue = 4;
   int line = 0;
   int linevalue=3;
   float y = 0;
@@ -11,17 +11,14 @@ class pattern1 {
   void drawAt() {
     y+=speed;
     //loop to create the pattern
-    while (bic<bicvalue) {
-
-
-
-      fill(280+20*bic, 100, 100);
+    while (diamond<diamondvalue) {
+      fill(280+20*diamond, 100, 100);
       //left side of pattern
-      rect(150+40*bic, y+375-75*bic, 75, 75);
+      rect(150+40*diamond, y+375-75*diamond, 75, 75);
 
       //right side of pattern
-      rect(775-40*bic, y+375-75*bic, 75, 75);
-      bic+=1;
+      rect(775-40*diamond, y+375-75*diamond, 75, 75);
+      diamond+=1;
       while (line<linevalue) {
         //straight lines of pattern
         fill(20*line, 100, 100);
@@ -34,8 +31,8 @@ class pattern1 {
     if (line==linevalue) {
       line=0;
     }
-    if (bic==bicvalue) {
-      bic=0;
+    if (diamond==diamondvalue) {
+      diamond=0;
     }
   }
 }
