@@ -1,5 +1,5 @@
 //sets the length of the array: you can change the number of squares by changed the number inside the []
-Square test[] = new Square[100];
+Square test[] = new Square[1000];
 //variables for playerX and playerY and the speed of the player also the variable to change to end screen
 int scene = 0;
 int playerX = 0;
